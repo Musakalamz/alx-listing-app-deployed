@@ -28,17 +28,16 @@ export default function BookingPage() {
     }
   }, [propertyId]);
 
-  const bookingDetails =
-    property
-      ? {
-          propertyName: property.title,
-          price: property.price,
-          bookingFee: 65,
-          totalNights: 1,
-          startDate: new Date().toLocaleDateString(),
-          imageUrl: property.imageUrl,
-        }
-      : null;
+  const bookingDetails = property
+    ? {
+        propertyName: property.title,
+        price: property.price,
+        bookingFee: 65,
+        totalNights: 1,
+        startDate: new Date().toLocaleDateString(),
+        imageUrl: property.imageUrl,
+      }
+    : null;
 
   if (confirmationId) {
     return (
