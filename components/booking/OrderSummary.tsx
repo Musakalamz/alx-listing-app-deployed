@@ -1,6 +1,13 @@
-const OrderSummary: React.FC<{ bookingDetails: any }> = ({
-  bookingDetails,
-}) => (
+type BookingDetails = {
+  propertyName: string;
+  startDate: string;
+  totalNights: number;
+  bookingFee: number;
+  price: number;
+  imageUrl?: string;
+};
+
+export default function OrderSummary({ bookingDetails }: { bookingDetails: BookingDetails }) {
   <div className="bg-white p-6 shadow-md rounded-lg">
     <h2 className="text-xl font-semibold">Review Order Details</h2>
     <div className="flex items-center mt-4">
@@ -35,5 +42,3 @@ const OrderSummary: React.FC<{ bookingDetails: any }> = ({
     </div>
   </div>
 );
-
-export default OrderSummary;

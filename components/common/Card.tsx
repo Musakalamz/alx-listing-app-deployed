@@ -3,14 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CardProps } from "@/interfaces";
 
-const Card: React.FC<CardProps> = ({
-  id,
-  title,
-  description,
-  imageUrl,
-  price,
-  location,
-}) => {
+export default function Card({ title }: CardProps) {
   return (
     <div className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden">
       {/* Image Section */}
@@ -136,5 +129,3 @@ const Card: React.FC<CardProps> = ({
     </div>
   );
 };
-
-export default Card;

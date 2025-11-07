@@ -1,5 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import type { Property } from '@/interfaces';
+import type { NextApiRequest, NextApiResponse } from "next";
 
 const PROPERTIES = [
   {

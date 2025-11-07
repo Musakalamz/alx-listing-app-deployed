@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import type { Property } from "@/interfaces";
+import Link from "next/link";
 
 export default function BookingPage() {
   const router = useRouter();
@@ -56,9 +57,7 @@ export default function BookingPage() {
                 <strong>Booking Reference:</strong> {confirmationId}
               </p>
             </div>
-            <a href="/" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
-              Browse More Properties
-            </a>
+            <Link href="/" className="text-blue-600 hover:underline">Go home</Link>
           </div>
         </div>
       </div>
@@ -99,3 +98,5 @@ export default function BookingPage() {
     </div>
   );
 }
+
+<p className="text-gray-600">You&apos;re all set! We&apos;ll send you a confirmation email shortly.</p>
