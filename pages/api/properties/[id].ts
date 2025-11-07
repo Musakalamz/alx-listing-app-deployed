@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
+import { PROPERTIES } from "../../data/properties";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query;
