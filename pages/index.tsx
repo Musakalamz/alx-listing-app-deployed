@@ -25,7 +25,7 @@ export default function Home() {
   if (loading) {
     return (
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 animate-pulse">
-        {[...Array(9)].map((_, i) => (
+        {[...Array(15)].map((_, i) => (
           <div key={i} className="bg-white shadow rounded-lg overflow-hidden">
             <div className="h-48 bg-gray-200" />
             <div className="p-4">
@@ -41,7 +41,7 @@ export default function Home() {
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-      {properties.slice(0, 9).map((property) => (
+      {properties.slice(0, 15).map((property) => (
         <PropertyCard key={property.id} property={property} />
       ))}
     </div>

@@ -32,10 +32,24 @@ export default function PropertyDetailPage() {
     fetchProperty();
   }, [id, router.isReady]);
 
-  if (loading) return <p className="text-center mt-10">Loading...</p>;
+  if (loading) {
+    return (
+      <div className="container mx-auto p-6 animate-pulse">
+        <div className="bg-white shadow rounded-lg overflow-hidden">
+          <div className="h-64 bg-gray-200 w-full" />
+          <div className="p-6">
+            <div className="h-6 bg-gray-200 w-1/3 mb-4" />
+            <div className="h-4 bg-gray-200 w-1/4 mb-2" />
+            <div className="h-4 bg-gray-200 w-1/5 mb-6" />
+            <div className="h-4 bg-gray-200 w-1/2 mb-2" />
+            <div className="h-4 bg-gray-200 w-1/3 mb-2" />
+          </div>
+        </div>
+      </div>
+    );
+  }
   if (error) return <p className="text-center text-red-600 mt-10">{error}</p>;
-  if (!property)
-    return <p className="text-center mt-10">Property not found.</p>;
+  if (!property) return <p className="text-center mt-10">Property not found.</p>;
 
   return <PropertyDetail property={property} />;
 }
