@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CardProps } from "@/interfaces";
 
-export default function Card({ title }: CardProps) {
+export default function Card({ title, imageUrl, price, description }: CardProps) {
   return (
     <div className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden">
       {/* Image Section */}
@@ -128,4 +128,4 @@ export default function Card({ title }: CardProps) {
       </div>
     </div>
   );
-};
+}

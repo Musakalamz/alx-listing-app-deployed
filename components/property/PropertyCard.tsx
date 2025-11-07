@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Property } from "@/interfaces";
 
 export default function PropertyCard({ property }: { property: Property }) {
@@ -6,9 +7,11 @@ export default function PropertyCard({ property }: { property: Property }) {
 
   return (
       <div className="bg-white shadow rounded-lg overflow-hidden">
-          <img
+          <Image
               src={imageUrl}
               alt={title}
+              width={400}
+              height={200}
               className="h-48 w-full object-cover"
               loading="lazy"
           />

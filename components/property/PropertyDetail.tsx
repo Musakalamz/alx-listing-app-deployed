@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Property } from "@/interfaces";
 import ReviewSection from "./ReviewSection";
 
@@ -18,9 +19,11 @@ export default function PropertyDetail({ property }: { property: Property }) {
   return (
     <div className="container mx-auto p-6">
       <div className="bg-white shadow rounded-lg overflow-hidden">
-        <img
+        <Image
           src={imageUrl}
           alt={title}
+          width={800}
+          height={400}
           className="h-64 w-full object-cover"
           loading="eager"
         />

@@ -89,7 +89,7 @@ export default function BookingPage() {
             <h2 className="text-xl font-semibold mt-6">Ground Rules</h2>
             <ul className="mt-2 text-gray-600 list-disc list-inside">
               <li>Follow the house rules</li>
-              <li>Treat your Host's home like your own</li>
+              <li>Treat your Host&apos;s home like your own</li>
             </ul>
           </div>
         </div>
@@ -98,5 +98,3 @@ export default function BookingPage() {
     </div>
   );
 }
-
-<p className="text-gray-600">You&apos;re all set! We&apos;ll send you a confirmation email shortly.</p>
