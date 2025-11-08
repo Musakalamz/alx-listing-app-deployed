@@ -117,7 +117,7 @@ const BookingForm: React.FC<BookingFormProps> = ({
           <input
             type="date"
             value={checkIn}
-            onChange={(e) => setCheckIn(e.targe.value)}
+            onChange={(e) => setCheckIn(e.target.value)}
             className="p-2 border rounded"
           />
           <input
